@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Crazy Film</title>
+<style>
+  :root { --bg:#130f0b; --card:#1d1812; --line:#33291f; --accent:#e8943a; --text:#f0e9e0; --sub:#b9aa97; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif; line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:56px 22px 64px; text-align:center; }
+  .logo { width:80px; height:80px; border-radius:20px; margin:0 auto 18px; background:linear-gradient(135deg,#e8943a,#a85f1c); display:flex; align-items:center; justify-content:center; font-size:38px; box-shadow:0 6px 22px rgba(0,0,0,.45); }
+  h1 { font-size:26px; margin:0 0 6px; }
+  .tagline { color:var(--sub); margin:0 0 36px; font-size:15px; }
+  a.item { display:flex; align-items:center; justify-content:space-between; text-decoration:none; color:var(--text); background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; margin:10px 0; font-size:16px; }
+  a.item span.arrow { color:var(--accent); }
+  footer { color:#7a6c5b; font-size:12px; margin-top:36px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">🎞️</div>
+    <h1>Crazy Film</h1>
+    <p class="tagline">Film metering · Negative conversion · Pro grading</p>
+
+    <a class="item" id="support" href="support.html"><span>Support / 技术支持</span><span class="arrow">→</span></a>
+    <a class="item" id="privacy" href="privacy-policy.html"><span>Privacy Policy / 隐私政策</span><span class="arrow">→</span></a>
+    <a class="item" id="terms" href="user-agreement.html"><span>Terms of Service / 用户协议</span><span class="arrow">→</span></a>
+
+    <footer>© 2026 Joy Ho · Crazy Film</footer>
+  </div>
+
+  <script>
+    // Point the links at the page matching the visitor's browser language.
+    (function () {
+      var code = (navigator.language || "en").toLowerCase();
+      var suffix;
+      if (code.indexOf("zh-hant") === 0 || code.indexOf("zh-tw") === 0 || code.indexOf("zh-hk") === 0) suffix = ".zh-Hant";
+      else if (code.indexOf("zh") === 0) suffix = "";       // Simplified Chinese = default page
+      else if (code.indexOf("ja") === 0) suffix = ".ja";
+      else if (code.indexOf("ko") === 0) suffix = ".ko";
+      else suffix = ".en";
+      document.getElementById("support").href = "support" + suffix + ".html";
+      document.getElementById("privacy").href = "privacy-policy" + suffix + ".html";
+      document.getElementById("terms").href = "user-agreement" + suffix + ".html";
+    })();
+  </script>
+</body>
+</html>

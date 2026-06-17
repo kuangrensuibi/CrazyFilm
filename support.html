@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Crazy Film · 技术支持</title>
+<style>
+  :root { --bg:#130f0b; --card:#1d1812; --line:#33291f; --accent:#e8943a; --text:#f0e9e0; --sub:#b9aa97; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:680px; margin:0 auto; padding:40px 20px 64px; }
+  header { text-align:center; margin-bottom:36px; }
+  .logo { width:72px; height:72px; border-radius:18px; margin:0 auto 14px; background:linear-gradient(135deg,#e8943a,#a85f1c); display:flex; align-items:center; justify-content:center; font-size:34px; box-shadow:0 6px 20px rgba(0,0,0,.4); }
+  h1 { font-size:24px; margin:6px 0 4px; }
+  .tagline { color:var(--sub); font-size:14px; margin:0; }
+  h2 { font-size:17px; margin:30px 0 12px; color:#fff; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; margin-bottom:14px; }
+  .row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0; }
+  .row + .row { border-top:1px solid var(--line); }
+  .label { color:var(--sub); font-size:13px; }
+  .value { font-size:15px; font-weight:600; word-break:break-all; }
+  .copy { border:none; background:rgba(232,148,58,.18); color:var(--accent); padding:6px 14px; border-radius:8px; font-size:13px; cursor:pointer; white-space:nowrap; }
+  .copy:active { opacity:.6; }
+  .q { font-weight:600; margin:0 0 4px; }
+  .a { color:var(--sub); font-size:14px; margin:0; }
+  .faq + .faq { margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
+  a { color:var(--accent); text-decoration:none; }
+  footer { text-align:center; color:#7a6c5b; font-size:12px; margin-top:36px; }
+  .toast { position:fixed; left:50%; bottom:40px; transform:translateX(-50%) translateY(20px); background:#222; color:#fff; padding:10px 18px; border-radius:10px; font-size:14px; opacity:0; pointer-events:none; transition:.25s; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">🎞️</div>
+      <h1>Crazy Film · 技术支持</h1>
+      <p class="tagline">胶片测光 · 负片转正 · 专业调色</p>
+    </header>
+
+    <h2>联系我们</h2>
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="label">客服邮箱</div>
+          <div class="value">joyho888@qq.com</div>
+        </div>
+        <button class="copy" onclick="copy('joyho888@qq.com','已复制邮箱')">复制</button>
+      </div>
+      <div class="row">
+        <div>
+          <div class="label">客服微信</div>
+          <div class="value">392903112</div>
+        </div>
+        <button class="copy" onclick="copy('392903112','已复制微信号')">复制</button>
+      </div>
+    </div>
+    <p class="a" style="margin:6px 2px 0;">我们通常在 24 小时内回复。</p>
+
+    <h2>常见问题</h2>
+    <div class="card">
+      <div class="faq">
+        <p class="q">免费试用与会员</p>
+        <p class="a">App 提供 7 天免费试用，期间全功能可用。试用结束后需开通会员才能继续使用。会员有「年度订阅」（自动续订）与「终身会员」（一次性买断）两种，可在会员页选择。</p>
+      </div>
+      <div class="faq">
+        <p class="q">换了手机，已购买如何恢复？</p>
+        <p class="a">进入会员页点击「恢复购买」，使用原 Apple ID 登录即可恢复会员权益，无需重复付费。</p>
+      </div>
+      <div class="faq">
+        <p class="q">如何取消订阅？</p>
+        <p class="a">前往 iPhone「设置 → Apple 账户 → 订阅」，找到 Crazy Film 关闭自动续订即可。终身会员为一次性买断，不涉及续订。</p>
+      </div>
+      <div class="faq">
+        <p class="q">支持哪些设备？</p>
+        <p class="a">支持运行 iOS 17.0 及以上系统的 iPhone。测光、实时负片与翻拍需要使用相机，建议在真机上使用。</p>
+      </div>
+      <div class="faq">
+        <p class="q">我的照片会被上传吗？</p>
+        <p class="a">不会。测光、负片转正、调色与导出均在本地设备完成，App 不联网上传任何照片，隐私安全。</p>
+      </div>
+      <div class="faq">
+        <p class="q">如何卸载 App？</p>
+        <p class="a">在主屏幕长按「Crazy Film」图标，选择「移除 App → 删除 App」即可。已购买的会员权益与 Apple ID 绑定，重新安装后在会员页点「恢复购买」即可找回。</p>
+      </div>
+      <div class="faq">
+        <p class="q">如何申请退款？</p>
+        <p class="a">App 内购买由 Apple 统一处理，退款也需向 Apple 申请：前往 <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>，用购买时的 Apple ID 登录，找到 Crazy Film 对应的购买记录，选择「请求退款」并填写原因提交。是否退款由 Apple 审核决定。</p>
+      </div>
+    </div>
+
+    <h2>相关条款</h2>
+    <div class="card">
+      <div class="row">
+        <div class="value" style="font-weight:500;">隐私政策</div>
+        <a href="https://kuangrensuibi.github.io/CrazyFilm/privacy-policy.html" target="_blank" rel="noopener">查看 →</a>
+      </div>
+      <div class="row">
+        <div class="value" style="font-weight:500;">用户协议</div>
+        <a href="https://kuangrensuibi.github.io/CrazyFilm/user-agreement.html" target="_blank" rel="noopener">查看 →</a>
+      </div>
+    </div>
+
+    <footer>© 2026 Joy Ho · Crazy Film · 保留所有权利</footer>
+  </div>
+
+  <div class="toast" id="toast">已复制</div>
+  <script>
+    function copy(text, label){
+      navigator.clipboard.writeText(text).then(function(){
+        var t=document.getElementById('toast');
+        t.textContent=label;
+        t.classList.add('show');
+        setTimeout(function(){ t.classList.remove('show'); }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>

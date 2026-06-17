@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Crazy Film · Support</title>
+<style>
+  :root { --bg:#130f0b; --card:#1d1812; --line:#33291f; --accent:#e8943a; --text:#f0e9e0; --sub:#b9aa97; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:680px; margin:0 auto; padding:40px 20px 64px; }
+  header { text-align:center; margin-bottom:36px; }
+  .logo { width:72px; height:72px; border-radius:18px; margin:0 auto 14px; background:linear-gradient(135deg,#e8943a,#a85f1c); display:flex; align-items:center; justify-content:center; font-size:34px; box-shadow:0 6px 20px rgba(0,0,0,.4); }
+  h1 { font-size:24px; margin:6px 0 4px; }
+  .tagline { color:var(--sub); font-size:14px; margin:0; }
+  h2 { font-size:17px; margin:30px 0 12px; color:#fff; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; margin-bottom:14px; }
+  .row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0; }
+  .row + .row { border-top:1px solid var(--line); }
+  .label { color:var(--sub); font-size:13px; }
+  .value { font-size:15px; font-weight:600; word-break:break-all; }
+  .copy { border:none; background:rgba(232,148,58,.18); color:var(--accent); padding:6px 14px; border-radius:8px; font-size:13px; cursor:pointer; white-space:nowrap; }
+  .copy:active { opacity:.6; }
+  .q { font-weight:600; margin:0 0 4px; }
+  .a { color:var(--sub); font-size:14px; margin:0; }
+  .faq + .faq { margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
+  a { color:var(--accent); text-decoration:none; }
+  footer { text-align:center; color:#7a6c5b; font-size:12px; margin-top:36px; }
+  .toast { position:fixed; left:50%; bottom:40px; transform:translateX(-50%) translateY(20px); background:#222; color:#fff; padding:10px 18px; border-radius:10px; font-size:14px; opacity:0; pointer-events:none; transition:.25s; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">🎞️</div>
+      <h1>Crazy Film · Support</h1>
+      <p class="tagline">Film metering · Negative conversion · Pro grading</p>
+    </header>
+
+    <h2>Contact Us</h2>
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="label">Email</div>
+          <div class="value">joyho888@qq.com</div>
+        </div>
+        <button class="copy" onclick="copy('joyho888@qq.com','Email copied')">Copy</button>
+      </div>
+      <div class="row">
+        <div>
+          <div class="label">WeChat</div>
+          <div class="value">392903112</div>
+        </div>
+        <button class="copy" onclick="copy('392903112','WeChat ID copied')">Copy</button>
+      </div>
+    </div>
+    <p class="a" style="margin:6px 2px 0;">We usually reply within 24 hours.</p>
+
+    <h2>FAQ</h2>
+    <div class="card">
+      <div class="faq">
+        <p class="q">Free trial and membership</p>
+        <p class="a">The App offers a 7-day free trial with all features unlocked. After it ends, a membership is required to keep using the App. Choose between an "Annual subscription" (auto-renewing) and a "Lifetime membership" (one-time) on the membership page.</p>
+      </div>
+      <div class="faq">
+        <p class="q">How do I restore a purchase on a new phone?</p>
+        <p class="a">On the membership page, tap "Restore Purchases" and sign in with the original Apple ID to restore your membership — no need to pay again.</p>
+      </div>
+      <div class="faq">
+        <p class="q">How do I cancel the subscription?</p>
+        <p class="a">Go to iPhone Settings → Apple Account → Subscriptions, select Crazy Film, and turn off auto-renewal. The lifetime membership does not renew.</p>
+      </div>
+      <div class="faq">
+        <p class="q">Which devices are supported?</p>
+        <p class="a">iPhones running iOS 17.0 or later. Metering, live negative, and copying use the camera, so a physical device is recommended.</p>
+      </div>
+      <div class="faq">
+        <p class="q">Are my photos uploaded?</p>
+        <p class="a">No. Metering, conversion, grading, and export all happen on your device; the App uploads no photos.</p>
+      </div>
+      <div class="faq">
+        <p class="q">How do I uninstall the App?</p>
+        <p class="a">On the Home Screen, press and hold the "Crazy Film" icon, then choose "Remove App → Delete App." Purchased membership is tied to your Apple ID; after reinstalling, tap "Restore Purchases" on the membership page to recover it.</p>
+      </div>
+      <div class="faq">
+        <p class="q">How do I request a refund?</p>
+        <p class="a">In-app purchases are handled by Apple, so refunds are requested from Apple too. Go to <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, sign in with the Apple ID used for the purchase, find the Crazy Film purchase, choose "Request a refund," and submit your reason. Apple decides whether to grant it.</p>
+      </div>
+    </div>
+
+    <h2>Legal</h2>
+    <div class="card">
+      <div class="row">
+        <div class="value" style="font-weight:500;">Privacy Policy</div>
+        <a href="https://kuangrensuibi.github.io/CrazyFilm/privacy-policy.en.html" target="_blank" rel="noopener">View →</a>
+      </div>
+      <div class="row">
+        <div class="value" style="font-weight:500;">Terms of Service</div>
+        <a href="https://kuangrensuibi.github.io/CrazyFilm/user-agreement.en.html" target="_blank" rel="noopener">View →</a>
+      </div>
+    </div>
+
+    <footer>© 2026 Joy Ho · Crazy Film · All rights reserved</footer>
+  </div>
+
+  <div class="toast" id="toast">Copied</div>
+  <script>
+    function copy(text, label){
+      navigator.clipboard.writeText(text).then(function(){
+        var t=document.getElementById('toast');
+        t.textContent=label;
+        t.classList.add('show');
+        setTimeout(function(){ t.classList.remove('show'); }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>

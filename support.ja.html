@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Crazy Film · サポート</title>
+<style>
+  :root { --bg:#130f0b; --card:#1d1812; --line:#33291f; --accent:#e8943a; --text:#f0e9e0; --sub:#b9aa97; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:680px; margin:0 auto; padding:40px 20px 64px; }
+  header { text-align:center; margin-bottom:36px; }
+  .logo { width:72px; height:72px; border-radius:18px; margin:0 auto 14px; background:linear-gradient(135deg,#e8943a,#a85f1c); display:flex; align-items:center; justify-content:center; font-size:34px; box-shadow:0 6px 20px rgba(0,0,0,.4); }
+  h1 { font-size:24px; margin:6px 0 4px; }
+  .tagline { color:var(--sub); font-size:14px; margin:0; }
+  h2 { font-size:17px; margin:30px 0 12px; color:#fff; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; margin-bottom:14px; }
+  .row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0; }
+  .row + .row { border-top:1px solid var(--line); }
+  .label { color:var(--sub); font-size:13px; }
+  .value { font-size:15px; font-weight:600; word-break:break-all; }
+  .copy { border:none; background:rgba(232,148,58,.18); color:var(--accent); padding:6px 14px; border-radius:8px; font-size:13px; cursor:pointer; white-space:nowrap; }
+  .copy:active { opacity:.6; }
+  .q { font-weight:600; margin:0 0 4px; }
+  .a { color:var(--sub); font-size:14px; margin:0; }
+  .faq + .faq { margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
+  a { color:var(--accent); text-decoration:none; }
+  footer { text-align:center; color:#7a6c5b; font-size:12px; margin-top:36px; }
+  .toast { position:fixed; left:50%; bottom:40px; transform:translateX(-50%) translateY(20px); background:#222; color:#fff; padding:10px 18px; border-radius:10px; font-size:14px; opacity:0; pointer-events:none; transition:.25s; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">🎞️</div>
+      <h1>Crazy Film · サポート</h1>
+      <p class="tagline">フィルム測光 · ポジ変換 · プロ調色</p>
+    </header>
+
+    <h2>お問い合わせ</h2>
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="label">メール</div>
+          <div class="value">joyho888@qq.com</div>
+        </div>
+        <button class="copy" onclick="copy('joyho888@qq.com','メールをコピーしました')">コピー</button>
+      </div>
+      <div class="row">
+        <div>
+          <div class="label">WeChat</div>
+          <div class="value">392903112</div>
+        </div>
+        <button class="copy" onclick="copy('392903112','WeChat IDをコピーしました')">コピー</button>
+      </div>
+    </div>
+    <p class="a" style="margin:6px 2px 0;">通常24時間以内に返信いたします。</p>
+
+    <h2>よくある質問</h2>
+    <div class="card">
+      <div class="faq">
+        <p class="q">無料トライアルとメンバーシップ</p>
+        <p class="a">7日間の無料トライアルがあり、期間中はすべての機能を利用できます。終了後は継続利用にメンバーシップ登録が必要です。「年間サブスクリプション」（自動更新）と「買い切りメンバーシップ」（一回限り）から選べます。</p>
+      </div>
+      <div class="faq">
+        <p class="q">機種変更後、購入を復元するには？</p>
+        <p class="a">メンバーページで「購入の復元」をタップし、購入時の Apple ID でサインインすると権利が復元されます。再課金は不要です。</p>
+      </div>
+      <div class="faq">
+        <p class="q">サブスクリプションの解約方法は？</p>
+        <p class="a">iPhone の「設定 → Apple アカウント → サブスクリプション」で Crazy Film を選び、自動更新をオフにしてください。買い切りメンバーシップは更新はありません。</p>
+      </div>
+      <div class="faq">
+        <p class="q">対応端末は？</p>
+        <p class="a">iOS 17.0 以降の iPhone に対応しています。測光・ライブネガ・複写にはカメラを使用するため、実機での利用を推奨します。</p>
+      </div>
+      <div class="faq">
+        <p class="q">写真はアップロードされますか？</p>
+        <p class="a">いいえ。測光・ポジ変換・調色・書き出しはすべて端末内で完結し、写真がアップロードされることはありません。</p>
+      </div>
+      <div class="faq">
+        <p class="q">アプリの削除方法は？</p>
+        <p class="a">ホーム画面で「Crazy Film」アイコンを長押しし、「Appを取り除く → Appを削除」を選びます。購入済みの権利は Apple ID に紐づくため、再インストール後にメンバーページで「購入の復元」を行えば回復します。</p>
+      </div>
+      <div class="faq">
+        <p class="q">返金の申請方法は？</p>
+        <p class="a">アプリ内課金は Apple が処理するため、返金も Apple へ申請します。<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> に購入時の Apple ID でサインインし、Crazy Film の購入履歴から「払い戻しをリクエスト」を選んで理由を記入してください。返金可否は Apple の審査により決定されます。</p>
+      </div>
+    </div>
+
+    <h2>関連規約</h2>
+    <div class="card">
+      <div class="row">
+        <div class="value" style="font-weight:500;">プライバシーポリシー</div>
+        <a href="https://kuangrensuibi.github.io/CrazyFilm/privacy-policy.ja.html" target="_blank" rel="noopener">表示 →</a>
+      </div>
+      <div class="row">
+        <div class="value" style="font-weight:500;">利用規約</div>
+        <a href="https://kuangrensuibi.github.io/CrazyFilm/user-agreement.ja.html" target="_blank" rel="noopener">表示 →</a>
+      </div>
+    </div>
+
+    <footer>© 2026 Joy Ho · Crazy Film · All rights reserved</footer>
+  </div>
+
+  <div class="toast" id="toast">コピーしました</div>
+  <script>
+    function copy(text, label){
+      navigator.clipboard.writeText(text).then(function(){
+        var t=document.getElementById('toast');
+        t.textContent=label;
+        t.classList.add('show');
+        setTimeout(function(){ t.classList.remove('show'); }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>
