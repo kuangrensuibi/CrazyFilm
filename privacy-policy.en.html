@@ -27,13 +27,13 @@
 <div class="wrap">
 
   <h1>Crazy Film Privacy Policy</h1>
-  <p class="meta">Effective date: June 18, 2026</p>
+  <p class="meta">Effective date: June 21, 2026</p>
 
   <p>Thank you for using "Crazy Film" (the "App"). We take your privacy seriously. This policy explains how the App handles your information.</p>
-  <p class="lead">In short: <strong>all processing happens locally on your device. The App does not collect, upload, or share any of your personal data.</strong></p>
+  <p class="lead">In short: <strong>the App has no server backend and never uploads or shares your personal data; aside from system services such as place-name lookup, all processing happens locally on your device.</strong></p>
 
   <h2>1. Information We Collect</h2>
-  <p>The App has no accounts, requires no registration, and transmits no personal data to any server. We therefore do not collect your name, phone number, location, device identifiers, or any other personal information.</p>
+  <p>The App has no accounts, requires no registration, and transmits no personal data to any server. We do not collect your name, phone number, device identifiers, or other personal information. The only location data the App uses is for the optional "shot log" feature and is stored locally on your device (see Section 4).</p>
 
   <h2>2. Camera Access</h2>
   <p>To provide live light metering, live negative viewing, and framing while copying negatives, the App accesses the camera when you use those features. The camera feed is used solely for on-device real-time computation and preview, and is <strong>never recorded or uploaded</strong>.</p>
@@ -46,26 +46,35 @@
   </ul>
   <p>These photos are processed only on your device and are never uploaded to any server. We do not read content you have not explicitly selected.</p>
 
-  <h2>4. Data Stored on Your Device</h2>
+  <h2>4. Location (GPS) Access</h2>
+  <p>The App offers an optional "shot log" that records shooting settings for each frame of film. When you tap "Log" on the metering screen, the App reads your current location (after you grant permission) in order to:</p>
+  <ul>
+    <li>tag that frame with its coordinates in the shot log, and resolve a place name via the system service;</li>
+    <li>write the coordinates into the photo's EXIF/GPS metadata when you export (just like a camera-taken photo).</li>
+  </ul>
+  <p>Location is requested only when you actively log a shot, using the "While Using the App" permission. The location data is stored only in the shot log on your device; place-name lookup is performed by the system (Apple) service. You may deny this permission and the rest of the shot log still works. We never upload your location to our servers.</p>
+
+  <h2>5. Data Stored on Your Device</h2>
   <p>The following is stored only on your device and is not accessible to us:</p>
   <ul>
     <li>imported photos and editing data such as color and crop settings;</li>
+    <li>your shot log (roll and per-frame data: aperture, shutter, EI, lens, coordinates and place name, notes, etc.);</li>
     <li>the first-launch timestamp used to compute the remaining "7-day free trial" time (an anonymous time value stored on the device).</li>
   </ul>
 
-  <h2>5. Purchases and Payments</h2>
+  <h2>6. Purchases and Payments</h2>
   <p>Membership (annual subscription and lifetime) payments are handled by the Apple App Store. We neither access nor store your payment information (such as card numbers). Purchase and subscription receipts are validated on-device by Apple's StoreKit.</p>
 
-  <h2>6. Third Parties</h2>
-  <p>The App integrates no third-party SDKs, contains no ads, includes no analytics/statistics tools, and shares no data with any third party.</p>
+  <h2>7. Third Parties</h2>
+  <p>The App integrates no third-party SDKs, contains no ads, includes no analytics/statistics tools, and shares no data with any third party. Place-name lookup uses Apple's system service.</p>
 
-  <h2>7. Children's Privacy</h2>
+  <h2>8. Children's Privacy</h2>
   <p>The App does not knowingly collect information from children under 13.</p>
 
-  <h2>8. Policy Updates</h2>
+  <h2>9. Policy Updates</h2>
   <p>If this policy is updated, we will post the latest version on this page and update the effective date.</p>
 
-  <h2>9. Contact Us</h2>
+  <h2>10. Contact Us</h2>
   <p>For any privacy-related questions, please contact:</p>
   <p class="contact"><span>Email</span>joyho888@qq.com</p>
   <p class="contact"><span>Developer</span>Joy Ho</p>
